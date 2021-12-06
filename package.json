@@ -1,0 +1,37 @@
+{
+  "name": "rick-and-morty",
+  "version": "1.0.0",
+  "description": "API rick and morty",
+  "author": "María Campos Sánchez",
+  "main": "src/undex.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon --legacy-watch src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --forceExit"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jest": "^27.4.3",
+    "mariadb": "^2.5.5",
+    "node-fetch": "^3.1.0",
+    "node-mocks-http": "^1.11.0",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.12.0-beta.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "javascript",
+    "jest",
+    "node",
+    "express"
+  ],
+  "homepage": ""
+}
