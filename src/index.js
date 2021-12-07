@@ -1,14 +1,11 @@
-require('dotenv').config();
-const app = require('./app');
-const config = require('./config');
-const { connect } = require('./database');
+import router from './routes/routes.js';
+import dotenv from 'dotenv';
+import express from 'express';
 
-const { port } = config;
-require('./database');
+dotenv.config();
 
-async function main() {
-  await connect();
-  await app.listen(port);
-  console.info(`App listening on port ${port}`);
-}
-main();
+const app = express();
+app.use(router);
+
+app.listen(process.env.API_PORT, () =>
+console.log('express is working!'));
