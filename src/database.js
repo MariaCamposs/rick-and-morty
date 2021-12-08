@@ -77,8 +77,8 @@ const database = {
       species VARCHAR(50),
       type VARCHAR(40),
       gender VARCHAR(40),
-      origin VARCHAR(40),
-      location VARCHAR(40),
+      origin VARCHAR(50),
+      location VARCHAR(50),
       image VARCHAR(250));`)
     },
     getData: async () => {
@@ -100,11 +100,11 @@ const database = {
   },
 };
 
-//await database.episodes.createTable()
-//  .then(database.episodes.getData())
-//  .then(database.locations.createTable())
-//  .then(database.locations.getData())
-//  .then(database.characters.createTable())
-//  .then(database.characters.getData());
+await database.episodes.createTable()
+  .then(database.episodes.getData())
+  .then(database.locations.createTable())
+  .then(database.locations.getData())
+  .then(database.characters.createTable())
+  .then(database.characters.getData());
 
 export default sequelize;
