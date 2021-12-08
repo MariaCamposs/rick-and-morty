@@ -1,37 +1,44 @@
 {
-  "name": "rick-and-morty",
+  "name": "rickandmorty",
   "version": "1.0.0",
-  "description": "API rick and morty",
-  "author": "María Campos Sánchez",
-  "main": "src/undex.js",
+  "description": "Rick and morty challenge querying the API",
+  "author": "Maria Campos Sanchez",
+  "main": "src/index.js",
   "license": "MIT",
-  "engines": {
-    "node": ">=10"
+  "type": "module",
+  "jest": {
+    "coveragePathIgnorePatterns": ["src/database.js"]
   },
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon --legacy-watch src/index.js",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --forceExit"
+    "dev": "nodemon src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --forceExit --verbose --coverage"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "jest": "^27.4.3",
     "mariadb": "^2.5.5",
     "node-fetch": "^3.1.0",
     "node-mocks-http": "^1.11.0",
-    "nodemon": "^2.0.15",
-    "sequelize": "^6.12.0-beta.1"
+    "sequelize": "^6.12.0-alpha.1"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.15"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/MariaCamposs/rick-and-morty"
   },
   "keywords": [
-    "javascript",
+    "express",
+    "mariadb",
+    "sequelize",
     "jest",
     "node",
-    "express"
+    "javascript"
   ],
-  "homepage": ""
+  "bugs": {
+    "url": "https://github.com/MariaCamposs/rick-and-morty/issues"
+  },
+  "homepage": "https://github.com/MariaCamposs/rick-and-morty#readme"
 }
